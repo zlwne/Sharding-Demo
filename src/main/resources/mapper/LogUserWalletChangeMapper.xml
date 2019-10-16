@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sharding.mapper.LogUserWalletChangeMapper">
+  <resultMap id="BaseResultMap" type="com.example.sharding.model.LogUserWalletChange">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_info_id" jdbcType="BIGINT" property="userInfoId" />
+    <result column="virtual_coin_id" jdbcType="BIGINT" property="virtualCoinId" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
+    <result column="after_balance" jdbcType="DECIMAL" property="afterBalance" />
+    <result column="frozen_amount" jdbcType="DECIMAL" property="frozenAmount" />
+    <result column="total_frozen_amount" jdbcType="DECIMAL" property="totalFrozenAmount" />
+    <result column="from_address" jdbcType="VARCHAR" property="fromAddress" />
+    <result column="to_address" jdbcType="VARCHAR" property="toAddress" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="type" jdbcType="CHAR" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="tx_id" jdbcType="VARCHAR" property="txId" />
+    <result column="vout_index" jdbcType="INTEGER" property="voutIndex" />
+    <result column="task_id" jdbcType="VARCHAR" property="taskId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+
+</mapper>

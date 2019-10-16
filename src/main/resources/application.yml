@@ -1,0 +1,30 @@
+#日志级别
+logging:
+  level:
+    com.example.sharding: debug
+server:
+  port: 9999
+spring:
+  datasource:
+    master:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://172.16.0.3:3306/gccx_data?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+      username: gccx
+      password: nKzcop0SqLj_7PZ
+    hikari:
+      connection-test-query: select 1
+      maximum-pool-size: 200
+      minimum-idle: 30
+#mybatis配置
+#mybatis:
+##实体类所在包名
+#  type-aliases-package: com.wx.securitydemo1.domain
+mybatis:
+  mapper-locations: classpath:mapper/*
+  type-aliases-package: com.example.sharding.model.*
+  #  config-location: classpath:mybatis-config.xml
+
+mapper:
+  mappers: com.example.sharding.common.SuperMapper
+  identity: MYSQL
